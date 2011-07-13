@@ -1,0 +1,19 @@
+{
+  "name": "TabSearch",
+  "version": "0.1",
+  "description": "Search in tabs",
+  "background_page": "background.html",
+  "browser_action": {
+    "default_title": "Search in tabs",
+    "default_icon": "gfx/35.png",
+    "popup": "popup.html"
+  },
+  "icons": {
+    "16": "gfx/16.png",
+    "32": "gfx/35.png",
+    "48": "gfx/48.png",
+    "128": "gfx/48.png"
+  },
+  "permissions": [ "tabs" ],
+  "minimum_chrome_version": "5.0.316.0" /* chrome.browserAction.setPopup */
+}
