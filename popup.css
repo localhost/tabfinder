@@ -44,6 +44,13 @@ p.tab:last-child {
   border-bottom-style:none;
 }
 
+img.icon {
+  float:left;
+  width:16px;
+  height:16px;
+  padding:0 5px 0;
+}
+
 span.title, span.url {
   display:block;
 }

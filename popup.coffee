@@ -11,6 +11,8 @@ document.addEventListener 'DOMContentLoaded', =>
         win_el = $('<dt id="win_' + win.id + '" class="window"><h3>Window ' + (++win_num) + '</h3></dt>').appendTo '#windows'
         for tab in win.tabs
           unless tab.url.indexOf('chrome') == 0
-            win_el.append '<p id="tab_' + tab.id + '" class="tab"><span class="title">' + tab.title + '</span><span class="url">' + tab.url + '</span></p>'
+            icon = tab.favIconUrl || 'gfx/favicon.ico'
+            icon = '<img class="icon" src="' + icon + '" />'
+            win_el.append '<p id="tab_' + tab.id + '" class="tab">' + icon + '<span class="title">' + tab.title + '</span><span class="url">' + tab.url + '</span></p>'
 
     $('#search').attr 'readonly', false
