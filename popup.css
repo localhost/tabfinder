@@ -34,14 +34,28 @@ dt.window h3 {
   -webkit-border-radius:5px;
 }
 
+dt.window .num {
+  font-size:75%;
+  color:#666;
+}
+
 p.tab {
   border-bottom:1px solid #ccc;
   font-size:88%;
-  padding:0;
+  margin:0;
+  padding:6px 0;
+}
+
+p.tab, p.tab > * {
+  cursor:pointer;
 }
 
 p.tab:last-child {
   border-bottom-style:none;
+}
+
+p.tab:hover {
+  background:#eee;
 }
 
 img.icon {
