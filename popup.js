@@ -33,6 +33,23 @@ document.addEventListener('DOMContentLoaded', __bind(function() {
       });
       return e.stopPropagation();
     }, this));
+    $('#term').bind('keyup', __bind(function(e) {
+      var term;
+      term = $('#term').val().toLowerCase();
+      if (term) {
+        return $('p.tab').each(__bind(function(index, el) {
+          if ($(el).text().toLowerCase().indexOf(term) === -1) {
+            return $(el).hide();
+          } else {
+            return $(el).show();
+          }
+        }, this));
+      } else {
+        return $('p.tab').each(__bind(function(index, el) {
+          return $(el).show();
+        }, this));
+      }
+    }, this));
     $('#term').attr('readonly', false);
     return $('#term').focus();
   }, this));

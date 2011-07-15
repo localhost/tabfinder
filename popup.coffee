@@ -22,5 +22,15 @@ document.addEventListener 'DOMContentLoaded', =>
       chrome.tabs.update tab_id, selected: true
       e.stopPropagation()
 
+    $('#term').bind 'keyup', (e) =>
+      term = $('#term').val().toLowerCase()
+      if (term)
+        $('p.tab').each (index, el) =>
+          if $(el).text().toLowerCase().indexOf(term) == -1
+            $(el).hide()
+          else $(el).show()
+      else
+        $('p.tab').each (index, el) => $(el).show()
+
     $('#term').attr 'readonly', false
     $('#term').focus()
