@@ -15,22 +15,20 @@ body {
   font-size:84%;
 }
 
-#popup {
+#popup, dt.window {
   white-space:nowrap;
-  max-width:340px;
+  max-width:335px;
   overflow:hidden;
 }
 
-dt.window {
-  padding:4px 6px;
-}
-
 dt.window h3 {
-  padding:4px 6px;
+  padding:8px 25px;
   background:#eee;
   color:#333;
   font-weight:bold;
   text-shadow:0 1px 0 white;
+  border:1px solid #ccc;
+  border-width:0 1px 1px 0;
   -webkit-border-radius:5px;
 }
 
@@ -44,10 +42,12 @@ dt.window .num {
 }
 
 p.tab {
-  border-bottom:1px solid #ccc;
-  font-size:88%;
+  border:1px solid #ccc;
+  border-width:0 1px 1px 0;
   margin:0;
-  padding:6px 0;
+  padding:5px 1px;
+  -webkit-border-radius:5px;
+  font-size:88%;
 }
 
 p.tab, p.tab > * {
