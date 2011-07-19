@@ -21,8 +21,9 @@ document.addEventListener 'DOMContentLoaded', =>
 
       $('#result').delegate 'p.tab', 'click', (e) =>
         tab_id = parseInt e.currentTarget.id.substring(4)
-        #win_id = parseInt $(e.currentTarget).parent()[0].id.substring(4)
+        win_id = parseInt $(e.currentTarget).parent()[0].id.substring(4)
         #console.log("event for tab %i in win %i", tab_id, win_id)
+        chrome.windows.update win_id, focused: true
         chrome.tabs.update tab_id, selected: true
         e.stopPropagation()
 

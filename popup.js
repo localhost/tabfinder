@@ -29,8 +29,12 @@ document.addEventListener('DOMContentLoaded', __bind(function() {
         }
       }
       $('#result').delegate('p.tab', 'click', __bind(function(e) {
-        var tab_id;
+        var tab_id, win_id;
         tab_id = parseInt(e.currentTarget.id.substring(4));
+        win_id = parseInt($(e.currentTarget).parent()[0].id.substring(4));
+        chrome.windows.update(win_id, {
+          focused: true
+        });
         chrome.tabs.update(tab_id, {
           selected: true
         });

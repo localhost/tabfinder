@@ -1,6 +1,6 @@
 {
   "name": "TabFinder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Finder of the lost tabs",
   "browser_action": {
     "default_title": "TabFinder",
