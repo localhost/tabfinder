@@ -8,7 +8,6 @@
 
 body {
   width:350px;
-  min-width:250px;
   max-width:350px;
   overflow-x:hidden;
   font-family:Helvetica, sans-serif;
@@ -19,9 +18,15 @@ body {
   white-space:nowrap;
   max-width:335px;
   overflow:hidden;
+  margin:24px 0 0;
+}
+
+dt.window:first-child {
+  margin:0;
 }
 
 dt.window h3 {
+  margin:4px 0 0;
   padding:8px 25px;
   background:#eee;
   color:#333;
@@ -62,10 +67,6 @@ p.tab.active, p.tab.active:hover {
   background:#eef;
 }
 
-p.tab:last-child {
-  border-bottom-style:none;
-}
-
 img.icon {
   float:left;
   width:16px;
@@ -80,4 +81,8 @@ span.title, span.url {
 span.url {
   font-size: 88%;
   color:gray;
+}
+
+#term {
+  width:328px;
 }

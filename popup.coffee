@@ -17,7 +17,7 @@ document.addEventListener 'DOMContentLoaded', =>
               class_selected = if win_focused && tab.selected then ' active' else ''
               icon = tab.favIconUrl || 'gfx/favicon.ico'
               icon = '<img class="icon" src="' + icon + '" />'
-              win_el.append '<p id="tab_' + tab.id + '" class="tab' + class_selected + '">' + icon + '<span class="title">' + tab.title + '</span><span class="url">' + tab.url + '</span></p>'
+              win_el.append '<p id="tab_' + tab.id + '" class="tab' + class_selected + '" title="' + tab.title + '">' + icon + '<span class="title">' + tab.title + '</span><span class="url">' + tab.url + '</span></p>'
 
       $('#result').delegate 'p.tab', 'click', (e) =>
         tab_id = parseInt e.currentTarget.id.substring(4)

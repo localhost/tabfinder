@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', __bind(function() {
               class_selected = win_focused && tab.selected ? ' active' : '';
               icon = tab.favIconUrl || 'gfx/favicon.ico';
               icon = '<img class="icon" src="' + icon + '" />';
-              win_el.append('<p id="tab_' + tab.id + '" class="tab' + class_selected + '">' + icon + '<span class="title">' + tab.title + '</span><span class="url">' + tab.url + '</span></p>');
+              win_el.append('<p id="tab_' + tab.id + '" class="tab' + class_selected + '" title="' + tab.title + '">' + icon + '<span class="title">' + tab.title + '</span><span class="url">' + tab.url + '</span></p>');
             }
           }
         }

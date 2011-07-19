@@ -1,12 +1,12 @@
-TabSearch
+TabFinder
 =========
 
-A Chrome extension to find your lost tabs.
+Finder of the lost tabs.
+
+Search for Chrome tab titles and URLs in all open windows.
 
 License
 -------
-
-(The MIT License)
 
 Copyright (c) 2011 Alex Brem <alex@fluktuation.net>
 
