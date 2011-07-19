@@ -4,7 +4,7 @@
   "description": "Finder of the lost tabs",
   "browser_action": {
     "default_title": "TabFinder",
-    "default_icon": "gfx/icon-48.png",
+    "default_icon": "gfx/icon-16.png",
     "popup": "popup.html"
   },
   "icons": {
@@ -13,5 +13,5 @@
     "128": "gfx/icon-128.png"
   },
   "permissions": [ "tabs" ],
-  "minimum_chrome_version": "5.0.316.0" /* chrome.browserAction.setPopup */
+  "minimum_chrome_version": "5.0.316.0"
 }
