@@ -1,4 +1,4 @@
-console = chrome.extension.getBackgroundPage().console
+console = chrome.extension.getBackgroundPage()?.console || `{log:function(){}}`
 
 document.addEventListener 'DOMContentLoaded', =>
   $('#term').attr 'readonly', true

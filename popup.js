@@ -1,6 +1,6 @@
-var console;
+var console, _ref;
 var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
-console = chrome.extension.getBackgroundPage().console;
+console = ((_ref = chrome.extension.getBackgroundPage()) != null ? _ref.console : void 0) || {log:function(){}};
 document.addEventListener('DOMContentLoaded', __bind(function() {
   $('#term').attr('readonly', true);
   $('#result').empty().append('<dl id="windows"></dl>');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', __bind(function() {
     return chrome.windows.getAll({
       populate: true
     }, __bind(function(windows) {
-      var class_focused, class_selected, icon, tab, win, win_el, win_focused, win_num, _i, _j, _len, _len2, _ref;
+      var class_focused, class_selected, icon, tab, win, win_el, win_focused, win_num, _i, _j, _len, _len2, _ref2;
       win_num = 0;
       for (_i = 0, _len = windows.length; _i < _len; _i++) {
         win = windows[_i];
@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', __bind(function() {
         class_focused = win_focused ? ' focused' : '';
         if (!win.incognito && win.type === 'normal') {
           win_el = $('<dt id="win_' + win.id + '" class="window' + class_focused + '"><h3>Window ' + (++win_num) + ' <span class="num">(' + win.tabs.length + ')</span></h3></dt>').appendTo('#windows');
-          _ref = win.tabs;
-          for (_j = 0, _len2 = _ref.length; _j < _len2; _j++) {
-            tab = _ref[_j];
+          _ref2 = win.tabs;
+          for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
+            tab = _ref2[_j];
             if (tab.url.indexOf('chrome') !== 0) {
               class_selected = win_focused && tab.selected ? ' active' : '';
               icon = tab.favIconUrl || 'gfx/favicon.ico';

@@ -1,8 +1,7 @@
 {
   "name": "TabFinder",
   "version": "0.1.0",
-  "description": "Find your tabs",
-  "background_page": "background.html",
+  "description": "Finder of the lost tabs",
   "browser_action": {
     "default_title": "TabFinder",
     "default_icon": "gfx/icon-48.png",
